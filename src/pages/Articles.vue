@@ -13,9 +13,6 @@ export default {
   components: {
     ArticlePreview,
   },
-  mounted() {
-    console.log(ArticlePreview)
-  },
 }
 </script>
 
