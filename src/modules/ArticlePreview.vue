@@ -1,6 +1,7 @@
 <template>
-  <router-link :to="path">
-    <img class="picture" src="https://images.pexels.com/photos/616808/pexels-photo-616808.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="pciture">
+  <router-link :to="path" class="grid">
+    <h3 :class="$style.title">Un couché de soleil</h3>
+    <img :class="$style.picture" src="../../src/assets/example.jpg" alt="picture">
   </router-link>
 </template>
 
@@ -13,8 +14,14 @@ export default {
     }
   },
 }
-</script >
+</script>
 
 <style module lang="scss">
-
+  .title {
+    font-size: 20px;
+  }
+  .picture {
+    width: 100%;
+    height: auto;
+  }
 </style>
