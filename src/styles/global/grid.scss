@@ -1,6 +1,19 @@
 .grid {
   padding: 0 30px;
+
   @include desktop {
     padding: 0 50px;
+  }
+}
+
+.grid-article{
+  padding: 5%;
+  
+  @include desktop {
+    padding: 5% 20%;
+  }
+
+  @include tablet {
+    padding: 5% 10%;
   }
 }
