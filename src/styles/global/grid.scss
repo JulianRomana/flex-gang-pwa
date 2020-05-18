@@ -7,13 +7,13 @@
 }
 
 .grid-article{
-  padding: 0 30px;
+  padding: 30px 30px;
 
   @include tablet {
-    padding: 0 100px;
+    padding: 30px 100px;
   }
   
   @include desktop {
-    padding: 0 200px;
+    padding: 30px 200px;
   }
 }

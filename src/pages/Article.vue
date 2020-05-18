@@ -1,12 +1,12 @@
 <template>
   <div class="grid-article">
     <div v-if="article">
-      <img class="image" :src="this.article.image" alt="images">
-      <h1 class="title">{{ this.article.title }}</h1>
-      <p class="text">{{ this.article.text }}</p>
+      <img :src="this.article.image" alt="images">
+      <h1 class="article-preview-title">{{ this.article.title }}</h1>
+      <p class="article-preview-description">{{ this.article.text }}</p>
     </div>
     <div v-else>
-      <h1>Something wrong happen</h1>
+      <h1>Petit malin, ne change pas l'url comme ça voyons. 🧐</h1>
     </div>
   </div>
 </template>
@@ -31,5 +31,10 @@ export default {
 <style module lang="scss">
   img{
     width: 100%;
+  }
+
+  h1{
+    margin: 10px 0;
+
   }
 </style>
