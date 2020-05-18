@@ -1,0 +1,26 @@
+// IMPORT FONTS
+
+%Grotesk {
+  font-family: 'Grotesk', sans-serif;
+}
+%Roboto-light {
+  font-family: 'RobotoLight', sans-serif;
+}
+%Roboto-regular {
+  font-family: 'RobotoRegular', sans-serif;
+}
+%Roboto-bold {
+  font-family: 'RobotoBold', sans-serif;
+}
+ 
+// CLASS
+
+.article-preview-title {
+  @extend %Grotesk;
+  font-size: 16px;
+}
+
+.article-preview-description {
+  @extend %Roboto-light;
+  font-size: 14px;
+}
