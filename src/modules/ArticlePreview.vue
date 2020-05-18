@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="path" class="grid">
+  <router-link :to="path">
     <div :class="$style.articlePreview">
       <img :class="$style.picture" src="../../src/assets/example.jpg" alt="picture">
       <div :class="$style.textContainer">
