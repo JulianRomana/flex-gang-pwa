@@ -6,7 +6,10 @@
     }]"
   >
     <router-link to="/">
-      <img :class="$style.logo" src="../../assets/controller.svg" alt="controller logo">
+      <div :class="$style.logoContainer">
+        <span  class="article-preview-title span">Fight.</span>
+        <img :class="$style.logo" src="../../assets/controller.svg" alt="controller logo">
+      </div>
     </router-link>
   </header>
 </template>
@@ -41,10 +44,20 @@ export default {
 
   .logo {
     width: 40px;
+    margin-left: 10px;
+  }
+
+  .logoContainer{
+    display: flex;
+    align-items: center;
   }
 
   .hasScrolled {
     background-color: white;
     box-shadow: 1px 2px 2px grey;
+  }
+
+  .span {
+    vertical-align: center;
   }
 </style>
