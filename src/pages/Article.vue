@@ -22,6 +22,7 @@ export default {
     }
   },
   async created() {
+    // eslint-disable-next-line max-len
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
     this.article = await response.json()
   },
