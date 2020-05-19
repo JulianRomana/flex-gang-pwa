@@ -31,7 +31,7 @@ export default {
     this.articles = this.articles.map((article) => {
       const articleModified = article
       articleModified.categorie = this.randomCategorie()
-      articleModified.image = 'https://i.ytimg.com/vi/NWPzIYJVa28/maxresdefault.jpg'
+      // articleModified.image = 'https://i.ytimg.com/vi/NWPzIYJVa28/maxresdefault.jpg'
       return articleModified
     })
   },

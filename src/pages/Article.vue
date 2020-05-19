@@ -1,7 +1,7 @@
 <template>
   <div class="grid-article">
     <div v-if="article">
-      <img class="image" src="https://i.ytimg.com/vi/NWPzIYJVa28/maxresdefault.jpg" alt="images">
+      <img class="image" src="../assets/default.jpg" alt="images">
       <h1 :class="$style.title" class="article-title">{{ article.title }}</h1>
       <p class="article-text">{{ article.body }}</p>
     </div>
