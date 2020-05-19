@@ -24,3 +24,13 @@
   @extend %Roboto-light;
   font-size: 14px;
 }
+
+.article-title{
+  @extend %Grotesk;
+  font-size: 22px;
+}
+
+.article-text{
+  @extend %Roboto-light;
+  font-size: 14px;
+}

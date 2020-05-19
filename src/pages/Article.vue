@@ -1,10 +1,9 @@
 <template>
   <div class="grid-article">
-      Article n°{{ $route.params.id }}
     <div v-if="article">
-      <img class="image" src="../assets/controller.svg" alt="images">
-      <h1 class="title">{{ article.title }}</h1>
-      <p class="text">{{ article.body }}</p>
+      <img class="image" src="https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg" alt="images">
+      <h1 :class="$style.title" class="article-title">{{ article.title }}</h1>
+      <p class="article-text">{{ article.body }}</p>
     </div>
     <div v-else>
       <h1>Petit malin, ne change pas l'url comme ça voyons. 🧐</h1>
@@ -24,6 +23,7 @@ export default {
   async created() {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
     this.article = await response.json()
+    console.log(this.article)
   },
   mounted() {
     console.log(this.$route)
@@ -36,7 +36,7 @@ export default {
     width: 100%;
   }
 
-  h1{
+  .title{
     margin: 10px 0;
   }
 </style>

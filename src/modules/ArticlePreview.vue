@@ -29,6 +29,7 @@ export default {
 </script>
 
 <style module lang="scss">
+
   .articlePreview {
     background-color: #d2d2d23e;
   }
