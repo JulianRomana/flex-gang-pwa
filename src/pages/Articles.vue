@@ -10,6 +10,7 @@
         time="3 mins"
         :content="article.body"
         :showContent="true"
+        :id="article.id"
         >
       </ArticlePreview>
     </div>

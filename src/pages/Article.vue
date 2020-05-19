@@ -24,7 +24,6 @@ export default {
     // eslint-disable-next-line max-len
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
     this.article = await response.json()
-    console.log(this.article)
   },
   mounted() {
     console.log(this.$route)

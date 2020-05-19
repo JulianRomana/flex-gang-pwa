@@ -23,11 +23,6 @@ export default {
       this.$router.push({ name: 'Article', params: { id: this.id } })
     },
   },
-  data() {
-    return {
-      id: 1,
-    }
-  },
   props: {
     picture: { type: String, required: true },
     title: { type: String, required: true },
@@ -35,6 +30,7 @@ export default {
     author: { type: String, required: true },
     time: { type: String, required: true },
     content: { type: String, required: true },
+    id: { type: Number, required: true },
     showContent: { type: Boolean, default: false },
   },
 }
