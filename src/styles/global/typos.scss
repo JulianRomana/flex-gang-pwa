@@ -18,6 +18,9 @@
 .article-preview-title {
   @extend %Grotesk;
   font-size: 16px;
+  @include desktop {
+    font-size: 22px;
+  }
 }
 
 .article-preview-description {
@@ -33,4 +36,7 @@
 .article-text{
   @extend %Roboto-light;
   font-size: 14px;
+  @include desktop {
+    font-size: 16px;
+  }
 }

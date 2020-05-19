@@ -6,6 +6,22 @@
   }
 }
 
+.grid-article-list {
+  padding: 0 30px;
+
+  @include tablet {
+    padding: 0 50px;
+  }
+
+  @include little-desktop {
+    padding: 0 100px;
+  }
+
+  @include desktop {
+    padding: 0 200px;
+  }
+}
+
 .grid-article{
   padding: 10px 10px;
 

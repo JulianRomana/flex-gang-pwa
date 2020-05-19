@@ -1,11 +1,17 @@
 <template>
-  <div>
+  <div class="grid-article-list">
     <h1>Articles</h1>
-    <ArticlePreview></ArticlePreview>
     <div v-for="article in articles" :key="article.id">
-      {{ article.title }}
-      {{ article.body }}
-      <router-link :to="`/article/${article.id}`">HOME</router-link>
+      <ArticlePreview
+        picture="http://image.jeuxvideo.com/medias-md/157849/1578490854-2372-card.jpg"
+        :title="article.title"
+        date="18/05/2020"
+        author="Bill Gates"
+        time="3 mins"
+        :content="article.body"
+        :showContent="true"
+        >
+      </ArticlePreview>
     </div>
   </div>
 </template>
