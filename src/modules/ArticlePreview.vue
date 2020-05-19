@@ -1,15 +1,15 @@
 <template>
   <div :class="$style.articlePreview" @click="onClick">
-    <img :class="$style.picture" :src="picture" alt="picture">
+    <img :class="$style.picture" :src="article.image" alt="picture">
     <div :class="$style.textContainer">
-      <h3 class="article-preview-title">{{ title }}</h3>
+      <h3 class="article-preview-title">{{ article.title }}</h3>
       <div :class="$style.description">
-        <p class="article-preview-description">Le {{ date }}</p>
-        <p class="article-preview-description">Écrit par {{ author }}</p>
+        <p class="article-preview-description">Le Lundi</p>
+        <p class="article-preview-description">Écrit par bogoss</p>
       </div>
-      <p class="article-preview-description">{{ time }}</p>
+      <p class="article-preview-description">Heure</p>
       <p :class="$style.textContent" v-if="showContent">
-        {{ content.substring(0,180) + '[...]' }}
+        {{ article.body.substring(0,180) + '[...]' }}
       </p>
     </div>
   </div>
@@ -18,20 +18,14 @@
 <script>
 export default {
   name: 'ArticlePreview',
+  props: {
+    article: { type: Object, required: true },
+    showContent: { type: Boolean, default: false },
+  },
   methods: {
     onClick() {
-      this.$router.push({ name: 'Article', params: { id: this.id } })
+      this.$router.push({ name: 'Article', params: { id: this.article.id } })
     },
-  },
-  props: {
-    picture: { type: String, required: true },
-    title: { type: String, required: true },
-    date: { type: String, required: true },
-    author: { type: String, required: true },
-    time: { type: String, required: true },
-    content: { type: String, required: true },
-    id: { type: Number, required: true },
-    showContent: { type: Boolean, default: false },
   },
 }
 </script>
@@ -41,7 +35,7 @@ export default {
   .articlePreview {
     background-color: #d2d2d23e;
     margin-bottom: 20px;
-    @include little-desktop {
+    @include desktop-small {
       background-color: unset;
       display: flex;
       cursor: pointer;
@@ -51,7 +45,7 @@ export default {
 
   .textContainer {
     padding: 0 10px 10px;
-    @include little-desktop {
+    @include desktop-small {
       padding: 0 0 0 45px;
       width: 60%;
     }
@@ -60,7 +54,7 @@ export default {
   .textContent {
     @extend %Roboto-regular;
     display: none;
-    @include little-desktop {
+    @include desktop-small {
       display: block;
       font-size: 20px;
       margin-top: 20px;
@@ -70,7 +64,7 @@ export default {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
-    @include little-desktop {
+    @include desktop-small {
       width: 40%;
     }
   }
@@ -87,7 +81,7 @@ export default {
     p:first-child {
       margin-right: 10px;
     }
-    @include little-desktop {
+    @include desktop-small {
       p:first-child {
         margin-right: 20px;
       }

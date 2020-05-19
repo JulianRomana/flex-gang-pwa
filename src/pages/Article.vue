@@ -1,7 +1,7 @@
 <template>
   <div class="grid-article">
     <div v-if="article">
-      <img class="image" src="https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg" alt="images">
+      <img class="image" src="https://i.ytimg.com/vi/NWPzIYJVa28/maxresdefault.jpg" alt="images">
       <h1 :class="$style.title" class="article-title">{{ article.title }}</h1>
       <p class="article-text">{{ article.body }}</p>
     </div>
@@ -21,7 +21,6 @@ export default {
     }
   },
   async created() {
-    // eslint-disable-next-line max-len
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
     this.article = await response.json()
   },

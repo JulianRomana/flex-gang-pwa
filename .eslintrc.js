@@ -20,9 +20,9 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'semi': ["error", "never"],
-    'comma-dangle': ["error", "always-multiline"],
-    'quotes': ["error", "single"],
-    'no-unused-vars': "error",
+    semi: ['error', 'never'],
+    'comma-dangle': ['error', 'always-multiline'],
+    quotes: ['error', 'single'],
+    'no-unused-vars': 'error',
   },
 }

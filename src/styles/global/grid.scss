@@ -13,7 +13,7 @@
     padding: 0 50px;
   }
 
-  @include little-desktop {
+  @include desktop-small {
     padding: 0 100px;
   }
 
@@ -29,7 +29,7 @@
     padding: 20px 100px;
   }
   
-  @include desktop {
+  @include desktop-small {
     padding: 30px 200px;
   }
 

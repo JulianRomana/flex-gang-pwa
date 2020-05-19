@@ -10,7 +10,7 @@
   }
 }
 
-@mixin little-desktop {
+@mixin desktop-small {
   @media (min-width: 900px) {
     @content;
   }
