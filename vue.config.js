@@ -9,8 +9,10 @@ module.exports = {
       display: 'fullscreen',
     },
     iconsPath: {
+      favicon16: '/public/img/icons/favicon.ico',
       favicon32: '/public/img/icons/favicon.ico',
       appleTouchIcon: '/public/img/icons/icon-152x152.png',
+      maskIcon: '/public/img/icons/favicon.ico',
       msTileImage: '/public/img/icons/icon-144x144.png',
     },
     workboxPluginMode: 'InjectManifest',
