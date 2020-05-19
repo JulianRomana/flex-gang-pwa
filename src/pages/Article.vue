@@ -1,9 +1,10 @@
 <template>
   <div class="grid-article">
+      Article n°{{ $route.params.id }}
     <div v-if="article">
-      <img :src="this.article.image" alt="images">
-      <h1 class="article-preview-title">{{ this.article.title }}</h1>
-      <p class="article-preview-description">{{ this.article.text }}</p>
+      <img class="image" src="../assets/controller.svg" alt="images">
+      <h1 class="title">{{ article.title }}</h1>
+      <p class="text">{{ article.body }}</p>
     </div>
     <div v-else>
       <h1>Petit malin, ne change pas l'url comme ça voyons. 🧐</h1>
@@ -12,18 +13,20 @@
 </template>
 
 <script>
-import articles from '../assets/articles.json'
 
 export default {
   name: 'Article',
   data() {
     return {
-      id: parseInt(this.$route.params.id, 10),
       article: null,
     }
   },
+  async created() {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
+    this.article = await response.json()
+  },
   mounted() {
-    this.article = articles.find((article) => article.id === this.id)
+    console.log(this.$route)
   },
 }
 </script>

@@ -1,13 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/articles">Articles</router-link>
+    <Header/>
+    <div :class="$style.app">
+      <router-view/>
     </div>
-    <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-  @import 'src/styles/styles.scss';
+<script>
+import { Header } from '@/modules/Header'
+
+export default {
+  name: 'App',
+  components: {
+    Header,
+  },
+}
+
+</script>
+
+<style module lang="scss">
+  .app {
+    margin-top: 70px;
+  }
 </style>
