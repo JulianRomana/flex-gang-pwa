@@ -2,7 +2,7 @@
   <div :class="$style.articlePreview" @click="onClick">
     <img :class="$style.picture" :src="picture" alt="picture">
     <div :class="$style.textContainer">
-      <h3 class="article-preview-title">Un couché de soleil magnifique de ouf beau le soir</h3>
+      <h3 class="article-preview-title">{{ title }}</h3>
       <div :class="$style.description">
         <p class="article-preview-description">Le {{ date }}</p>
         <p class="article-preview-description">Écrit par {{ author }}</p>
