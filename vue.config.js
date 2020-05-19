@@ -18,4 +18,13 @@ module.exports = {
       swSrc: 'src/service-worker.js',
     },
   },
+  css: {
+    loaderOptions: {
+      sass: {
+        prependData: `
+          @import "@/styles/global/mediaQuery.scss";
+        `,
+      },
+    },
+  },
 }

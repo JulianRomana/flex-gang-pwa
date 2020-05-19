@@ -38,6 +38,5 @@ export default {
 
   h1{
     margin: 10px 0;
-
   }
 </style>
