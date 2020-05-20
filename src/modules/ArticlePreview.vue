@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.articlePreview" @click="onClick">
-    <img :class="$style.picture" src="../assets/default.jpg" alt="picture">
+    <img :class="$style.picture" src="@/assets/smash.jpg" alt="picture">
     <div :class="$style.textContainer">
       <h3 class="article-preview-title">{{ article.title }}</h3>
       <div :class="$style.description">

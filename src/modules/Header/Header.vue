@@ -11,6 +11,7 @@
         <img :class="$style.logo" src="../../assets/controller.svg" alt="controller logo">
       </div>
     </router-link>
+    <router-link :class="$style.articleLink" to="/articles">articles</router-link>
   </header>
 </template>
 
@@ -36,10 +37,14 @@ export default {
   .wrapper {
     position: fixed;
     top: 0;
+    left: 0;
     display: flex;
+    justify-content: space-between;
     width: 100vw;
-    padding: 10px;
+    padding: 20px;
     transition: all .2s ease-in-out;
+    align-items: center;
+    max-width: calc(100% - 40px);
   }
 
   .logo {
@@ -59,5 +64,10 @@ export default {
 
   .span {
     vertical-align: center;
+  }
+
+  .articleLink {
+    font-family: 'Grotesk';
+    cursor: pointer;
   }
 </style>

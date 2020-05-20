@@ -1,6 +1,10 @@
 <template>
   <div v-if="articles" class="grid-article-list">
-
+    <h2 class="article-preview-title"
+      :class="$style.articlesTitle"
+    >
+      Articles
+    </h2>
     <div v-for="article in articles" :key="article.id">
       <ArticlePreview :article="article" :showContent="true"></ArticlePreview>
     </div>
@@ -40,5 +44,7 @@ export default {
 </script>
 
 <style module lang="scss">
-
+  .articlesTitle {
+    padding: 2rem 0;
+  }
 </style>
