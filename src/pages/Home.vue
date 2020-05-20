@@ -1,10 +1,7 @@
 <template>
   <div class="grid" v-if="articles">
-    <div v-for="article in articles.slice(0,1)" :key="article.id">
-      <ArticlePreview :article="article" :showContent="true"></ArticlePreview>
-    </div>
-    <div v-for="article in articles.slice(1,3)" :key="article.id">
-      <ArticlePreview :article="article" :showContent="true"></ArticlePreview>
+    <div v-for="article in articles.slice(0, 5)" :key="article.id">
+      <ArticlePreview :article="article" :showContent="true" />
     </div>
   </div>
 </template>
