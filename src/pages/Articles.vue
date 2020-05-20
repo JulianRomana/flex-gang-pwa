@@ -5,7 +5,18 @@
     >
       Articles
     </h2>
-    <div v-for="article in articles" :key="article.id">
+
+    <input value="ouf" type="button" @click="handleClick">
+    <input value="relax" type="button" @click="handleClick">
+    <input value="normal" type="button" @click="handleClick">
+    <input value="all" type="button" @click="handleClick">
+
+    <div v-if="categorieSelected !== 'all'">
+      <div v-for="article in articles" :key="article.id">
+        <ArticlePreview v-if="article.categorie === categorieSelected" :article="article" :showContent="true"></ArticlePreview>
+      </div>
+    </div>
+    <div v-else v-for="article in articles" :key="article.id">
       <ArticlePreview :article="article" :showContent="true"></ArticlePreview>
     </div>
   </div>
@@ -22,11 +33,17 @@ export default {
   data: () => ({
     articles: null,
     categories: ['ouf', 'relax', 'normal'],
+    categorieSelected: 'all',
   }),
   methods: {
     randomCategorie() {
       const random = Math.floor(Math.random() * this.categories.length)
       return this.categories[random]
+    },
+    handleClick(e) {
+      const { value } = e.target
+      console.log(value)
+      this.categorieSelected = value
     },
   },
   async created() {
