@@ -5,9 +5,6 @@
       <h1 :class="$style.title" class="article-title">{{ article.title }}</h1>
       <p class="article-text">{{ article.body }}</p>
     </div>
-    <div v-else>
-      <h1>Petit malin, ne change pas l'url comme ça voyons. 🧐</h1>
-    </div>
   </div>
 </template>
 
