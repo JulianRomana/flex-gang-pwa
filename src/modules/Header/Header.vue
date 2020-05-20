@@ -39,7 +39,6 @@ export default {
     top: 0;
     left: 0;
     display: flex;
-    justify-content: space-between;
     width: 100vw;
     padding: 20px;
     transition: all .2s ease-in-out;
@@ -50,6 +49,7 @@ export default {
   .logo {
     width: 40px;
     margin-left: 10px;
+    margin-right: 70px;
   }
 
   .logoContainer{
