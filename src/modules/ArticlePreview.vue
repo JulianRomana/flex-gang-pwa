@@ -7,7 +7,7 @@
         <p class="article-preview-description">Le Lundi</p>
         <p class="article-preview-description">Écrit par bogoss</p>
       </div>
-      <p class="article-preview-description">Heure</p>
+      <p class="article-preview-description">3h33</p>
       <p :class="$style.textContent" v-if="showContent">
         {{ article.body.substring(0,180) + '[...]' }}
       </p>
@@ -35,10 +35,11 @@ export default {
   .articlePreview {
     background-color: #d2d2d23e;
     margin-bottom: 20px;
+    cursor: pointer;
+
     @include desktop-small {
       background-color: unset;
       display: flex;
-      cursor: pointer;
       margin-bottom: 40px;
     }
   }
