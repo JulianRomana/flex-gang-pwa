@@ -1,6 +1,5 @@
 <template>
   <div class="grid" v-if="articles">
-    <router-link to="/articles">articles</router-link>
     <div v-for="article in articles.slice(0,1)" :key="article.id">
       <ArticlePreview :article="article" :showContent="true"></ArticlePreview>
     </div>
